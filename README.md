@@ -2,4 +2,5 @@
 
 Run with:
 
-      python run.py upperbound lowerbound
+	$python brt.py
+	$python run.py upperbound lowerbound
